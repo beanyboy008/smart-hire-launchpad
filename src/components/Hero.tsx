@@ -1,5 +1,4 @@
-
-import { ArrowRight, User, Briefcase } from "lucide-react";
+import { ArrowRight, User, Briefcase, CheckCircle, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -48,15 +47,27 @@ const Hero = () => {
             <div className="relative">
               <div className="w-full h-96 rounded-xl bg-gradient-to-br from-hiresmart-purple to-hiresmart-light-purple p-1">
                 <div className="w-full h-full rounded-lg bg-white p-4 flex flex-col justify-center items-center">
-                  <div className="w-40 h-40 bg-hiresmart-soft-purple rounded-full mb-4 flex items-center justify-center">
-                    <User className="w-20 h-20 text-hiresmart-purple" />
+                  <div className="w-48 h-48 bg-hiresmart-soft-purple rounded-full mb-4 flex items-center justify-center relative">
+                    <User className="w-24 h-24 text-hiresmart-purple" />
+                    <CheckCircle 
+                      className="absolute bottom-2 right-2 w-8 h-8 text-green-500 bg-white rounded-full" 
+                      strokeWidth={2} 
+                    />
                   </div>
-                  <div className="w-full space-y-3">
-                    <div className="h-3 bg-gray-200 rounded w-3/4 mx-auto"></div>
-                    <div className="h-3 bg-gray-200 rounded w-1/2 mx-auto"></div>
-                    <div className="flex justify-center space-x-2 mt-4">
-                      <Briefcase className="w-6 h-6 text-hiresmart-purple" />
-                      <span className="text-sm text-gray-600">Professional Candidate Profile</span>
+                  <div className="w-full space-y-4 text-center">
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-800">Alex Rodriguez</h3>
+                      <p className="text-sm text-gray-500">Senior Software Engineer</p>
+                    </div>
+                    <div className="flex justify-center space-x-4">
+                      <div className="flex items-center space-x-2">
+                        <Award className="w-5 h-5 text-hiresmart-purple" />
+                        <span className="text-sm text-gray-600">Top 5% Candidate</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Briefcase className="w-5 h-5 text-hiresmart-purple" />
+                        <span className="text-sm text-gray-600">Tech Innovator</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -72,4 +83,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
