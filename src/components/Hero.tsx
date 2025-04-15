@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, User, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -47,17 +47,17 @@ const Hero = () => {
           <div className="hidden lg:block lg:w-2/5 animate-fade-in" style={{ animationDelay: "0.5s" }}>
             <div className="relative">
               <div className="w-full h-96 rounded-xl bg-gradient-to-br from-hiresmart-purple to-hiresmart-light-purple p-1">
-                <div className="w-full h-full rounded-lg bg-white p-4">
-                  <div className="animate-float">
-                    <div className="w-full h-10 mb-4 rounded bg-gray-100"></div>
-                    <div className="w-full h-20 mb-4 rounded bg-gray-100"></div>
-                    <div className="flex gap-2 mb-4">
-                      <div className="w-1/3 h-12 rounded bg-hiresmart-soft-purple"></div>
-                      <div className="w-1/3 h-12 rounded bg-hiresmart-blue"></div>
-                      <div className="w-1/3 h-12 rounded bg-gray-100"></div>
+                <div className="w-full h-full rounded-lg bg-white p-4 flex flex-col justify-center items-center">
+                  <div className="w-40 h-40 bg-hiresmart-soft-purple rounded-full mb-4 flex items-center justify-center">
+                    <User className="w-20 h-20 text-hiresmart-purple" />
+                  </div>
+                  <div className="w-full space-y-3">
+                    <div className="h-3 bg-gray-200 rounded w-3/4 mx-auto"></div>
+                    <div className="h-3 bg-gray-200 rounded w-1/2 mx-auto"></div>
+                    <div className="flex justify-center space-x-2 mt-4">
+                      <Briefcase className="w-6 h-6 text-hiresmart-purple" />
+                      <span className="text-sm text-gray-600">Professional Candidate Profile</span>
                     </div>
-                    <div className="w-full h-32 mb-4 rounded bg-gray-100"></div>
-                    <div className="w-1/2 h-10 rounded bg-hiresmart-orange mx-auto"></div>
                   </div>
                 </div>
               </div>
@@ -72,3 +72,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
